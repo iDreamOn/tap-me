@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CB97DEE219D3CCC700B37D71 /* tap-me */,
-				CB97DF0119D3CCC800B37D71 /* Tap MeTests */,
+				CB97DF0119D3CCC800B37D71 /* tap-meTests */,
 				CB97DEDB19D3CCC700B37D71 /* Frameworks */,
 				CB97DEDA19D3CCC700B37D71 /* Products */,
 			);
@@ -190,13 +190,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CB97DF0119D3CCC800B37D71 /* Tap MeTests */ = {
+		CB97DF0119D3CCC800B37D71 /* tap-meTests */ = {
 			isa = PBXGroup;
 			children = (
 				CB97DF0719D3CCC800B37D71 /* Tap_MeTests.m */,
 				CB97DF0219D3CCC800B37D71 /* Supporting Files */,
 			);
-			path = "Tap MeTests";
+			path = "tap-meTests";
 			sourceTree = "<group>";
 		};
 		CB97DF0219D3CCC800B37D71 /* Supporting Files */ = {
