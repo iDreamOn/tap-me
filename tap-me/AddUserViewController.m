@@ -69,12 +69,26 @@
 
 //creates a new user
 -(IBAction)createUserPressed{
+   //NSLog(@"Creating:\nfirstname: %@ username: password: ",_firstnameTextField.text);
+    if ([_firstnameTextField.text isEqual:@""]) {
+        NSLog(@"Invalid firstname");
+    } else {
+        //Set current user
+        [self performSegueWithIdentifier:@"showWelcomePlayer" sender:self];
+    }
     
 }
 
 //set current user
 -(IBAction)setCurrentUser {
     
+}
+
+-(Boolean) validate:(NSString *) value {
+//    if (value!="") {
+//        return true;
+//    }
+    return false;
 }
 
 /*

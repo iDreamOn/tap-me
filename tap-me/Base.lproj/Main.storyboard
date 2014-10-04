@@ -222,7 +222,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7jc-wm-vbq" kind="push" id="IMM-kk-4Uk"/>
+                                    <action selector="createUserPressed" destination="kY6-Jz-pVZ" eventType="touchUpInside" id="uHT-or-SFo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-bz-t3o">
@@ -243,6 +243,7 @@
                         <outlet property="firstnameTextField" destination="UI6-EW-3kh" id="Pgi-bc-8eb"/>
                         <outlet property="passwordTextField" destination="0w6-if-NrJ" id="bAh-T0-Eb9"/>
                         <outlet property="usernameTextField" destination="uHV-3x-QwT" id="li5-qv-4qt"/>
+                        <segue destination="7jc-wm-vbq" kind="push" identifier="showWelcomePlayer" id="b15-Ld-ge7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFE-dE-398" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,8 +356,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="b15-Ld-ge7"/>
+        <segue reference="l0N-kC-i8R"/>
         <segue reference="N5n-JC-j80"/>
-        <segue reference="IQ0-y5-Q6V"/>
-        <segue reference="IMM-kk-4Uk"/>
     </inferredMetricsTieBreakers>
 </document>
