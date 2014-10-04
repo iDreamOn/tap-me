@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCr-Qr-x0w">
-                                <rect key="frame" x="45" y="121" width="228" height="240"/>
+                                <rect key="frame" x="64" y="102" width="192" height="209"/>
                                 <color key="tintColor" red="0.23474056109999999" green="0.75" blue="0.19506207170000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" backgroundImage="button_tap_deselected.png">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,16 +41,16 @@
                                 <rect key="frame" x="0.0" y="18" width="320" height="22"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-fc-yes">
-                                <rect key="frame" x="126" y="508" width="66" height="30"/>
-                                <state key="normal" title="Log out">
+                                <rect key="frame" x="127" y="435" width="66" height="30"/>
+                                <state key="normal" title="Exit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="logout" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oLQ-4b-0bx"/>
+                                    <action selector="quitGame" destination="vXZ-lx-hvc" eventType="touchUpInside" id="o0E-Of-HQC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-Ly-c80">
-                                <rect key="frame" x="86" y="369" width="146" height="102"/>
+                                <rect key="frame" x="86" y="319" width="146" height="102"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.56703629032258063" green="0.80156880040322576" blue="0.74590473790322576" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -62,12 +62,12 @@
                     <connections>
                         <outlet property="scoreLabel" destination="tTa-Ly-c80" id="FeI-U3-dnq"/>
                         <outlet property="timerLabel" destination="mg4-Z2-55F" id="ZY4-ZH-iTd"/>
-                        <segue destination="JPM-MA-EfT" kind="push" identifier="backtologin" id="b7s-hf-Fhb"/>
+                        <segue destination="7jc-wm-vbq" kind="push" identifier="showWelcomePlayer" id="2io-rb-BnV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="230"/>
+            <point key="canvasLocation" x="1354" y="230"/>
         </scene>
         <!--Login View Controller - Login-->
         <scene sceneID="Mez-yP-2be">
@@ -208,7 +208,7 @@
                                 <rect key="frame" x="71" y="309" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="a6x-XC-vuG"/>
                                     <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="lzt-Oa-kK1"/>
@@ -331,12 +331,20 @@
                                     <segue destination="vXZ-lx-hvc" kind="push" id="S7g-T4-0Uy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZp-qw-gIj">
+                                <rect key="frame" x="135" y="355" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lxk-gj-ix3"/>
                     <connections>
                         <outlet property="welcomeTextField" destination="wkP-rl-71o" id="b87-P8-A7F"/>
+                        <segue destination="tKq-6m-8eh" kind="push" identifier="WelcomeToTap" id="BAc-eb-34b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRp-wY-snN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,8 +364,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="b15-Ld-ge7"/>
-        <segue reference="l0N-kC-i8R"/>
-        <segue reference="N5n-JC-j80"/>
+        <segue reference="2io-rb-BnV"/>
+        <segue reference="BAc-eb-34b"/>
     </inferredMetricsTieBreakers>
 </document>

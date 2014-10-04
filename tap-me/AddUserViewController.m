@@ -7,6 +7,7 @@
 //
 
 #import "AddUserViewController.h"
+#import "Player.h"
 
 @interface AddUserViewController ()
 
@@ -65,30 +66,35 @@
     [UIView commitAnimations];
 }
 
-
-
 //creates a new user
 -(IBAction)createUserPressed{
    //NSLog(@"Creating:\nfirstname: %@ username: password: ",_firstnameTextField.text);
-    if ([_firstnameTextField.text isEqual:@""]) {
-        NSLog(@"Invalid firstname");
-    } else {
-        //Set current user
+    if ([self hasValidEntries]) {
+        [self setCurrentUser];
         [self performSegueWithIdentifier:@"showWelcomePlayer" sender:self];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid entries!"
+                                                        message:[NSString stringWithFormat:@"Please check your entries"]
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        
+        [alert show];
+        NSLog(@"Invalid entries");
     }
     
 }
 
 //set current user
 -(IBAction)setCurrentUser {
-    
+    Player *curr =[Player getInstance];
+    [curr setFirstname:_firstnameTextField.text];
+    [curr setUsername:_usernameTextField.text];
+    [curr setPassword:_passwordTextField.text];
 }
 
--(Boolean) validate:(NSString *) value {
-//    if (value!="") {
-//        return true;
-//    }
-    return false;
+-(Boolean) hasValidEntries {
+    return !([_firstnameTextField.text length]==0||[_usernameTextField.text length]==0||[_passwordTextField.text length]==0);
 }
 
 /*

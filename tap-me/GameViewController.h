@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController<UIAlertViewDelegate> {
+@interface GameViewController : UIViewController<UIAlertViewDelegate> {
     IBOutlet UILabel *scoreLabel;
     IBOutlet UILabel *timerLabel;
 
@@ -26,7 +26,7 @@
 }
 
 - (IBAction) buttonPressed;
-- (IBAction) logout;
+- (IBAction) quitGame;
 
 
 @end

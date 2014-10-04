@@ -6,13 +6,13 @@
 //
 //
 
-#import "ViewController.h"
+#import "GameViewController.h"
 
-@interface ViewController ()
+@interface GameViewController ()
 
 @end
 
-@implementation ViewController
+@implementation GameViewController
 
 - (AVAudioPlayer *)setupAudioPlayerWithFile:(NSString *)file type:(NSString *)type
 {
@@ -43,9 +43,6 @@
     timerLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field_time.png"]];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_tile.png"]];
     
-    
-    
-    
     buttonBeep = [self setupAudioPlayerWithFile:@"ButtonTap" type:@"wav"];
     secondBeep = [self setupAudioPlayerWithFile:@"SecondBeep" type:@"wav"];
     backgroundMusic = [self setupAudioPlayerWithFile:@"HallOfTheMountainKing" type:@"mp3"];
@@ -60,10 +57,10 @@
 }
 
 
-- (IBAction) logout{
+- (IBAction) quitGame{
 
     [self resetGame];
-    [self performSegueWithIdentifier:@"backtologin" sender:self];
+    [self performSegueWithIdentifier:@"showWelcomePlayer" sender:self];
 
 
 }

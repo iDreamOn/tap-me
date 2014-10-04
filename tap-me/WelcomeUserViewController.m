@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeUserViewController.h"
+#import "Player.h"
 
 @interface WelcomeUserViewController ()
 
@@ -26,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    Player *curr = [Player getInstance];
+    _welcomeTextField.text = [NSString stringWithFormat:@"Welcome %@", curr.getFirstname];
+    
     // Do any additional setup after loading the view.
 }
 
