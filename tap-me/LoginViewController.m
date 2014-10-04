@@ -24,6 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)loginPressed:(UIButton *)sender {
+}
+
 -(IBAction) login{
     NSLog(@"login");
     

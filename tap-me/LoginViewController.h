@@ -12,12 +12,10 @@
 
 IBOutlet UITextField *username;
 IBOutlet UITextField *password;
-    IBOutlet UILabel *failedlogin;
-    
-    
-    
+IBOutlet UILabel *failedlogin;
 }
+- (IBAction)loginPressed:(UIButton *)sender;
 
--(IBAction) login;
+-(IBAction)login;
 
 @end
