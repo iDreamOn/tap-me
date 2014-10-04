@@ -41,11 +41,6 @@
         [failedlogin setHidden:NO];
     
     }
-    
-  
-    
-    
-    
 }
 
 /*

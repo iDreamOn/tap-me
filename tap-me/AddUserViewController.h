@@ -11,7 +11,7 @@
 @interface AddUserViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIImageView *placeholderImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *finalImageView;
-@property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *firstnameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 

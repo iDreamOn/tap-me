@@ -39,6 +39,7 @@
 		CBCE5CC419E039C600BD3FA3 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CC319E039C600BD3FA3 /* AddUserViewController.m */; };
 		CBCE5CC719E03F9100BD3FA3 /* WelcomeUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CC619E03F9100BD3FA3 /* WelcomeUserViewController.m */; };
 		CBCE5CCA19E04C2B00BD3FA3 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CC919E04C2B00BD3FA3 /* WelcomeViewController.m */; };
+		CBCE5CCD19E06F5E00BD3FA3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CCC19E06F5E00BD3FA3 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +50,7 @@
 		CB97DEDE19D3CCC700B37D71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CB97DEE019D3CCC700B37D71 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB97DEE619D3CCC700B37D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB97DEE819D3CCC700B37D71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB97DEE819D3CCC700B37D71 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		CB97DEEA19D3CCC700B37D71 /* tap-me-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tap-me-Prefix.pch"; sourceTree = "<group>"; };
 		CB97DEEB19D3CCC700B37D71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB97DEEC19D3CCC700B37D71 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,11 +82,13 @@
 		CB97DF3319D51F3700B37D71 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CB97DF3819D639EF00B37D71 /* tap-me-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tap-me-Info.plist"; sourceTree = "<group>"; };
 		CBCE5CC219E039C600BD3FA3 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
-		CBCE5CC319E039C600BD3FA3 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
+		CBCE5CC319E039C600BD3FA3 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CBCE5CC519E03F9100BD3FA3 /* WelcomeUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeUserViewController.h; sourceTree = "<group>"; };
 		CBCE5CC619E03F9100BD3FA3 /* WelcomeUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeUserViewController.m; sourceTree = "<group>"; };
 		CBCE5CC819E04C2B00BD3FA3 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		CBCE5CC919E04C2B00BD3FA3 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		CBCE5CCB19E06F5E00BD3FA3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		CBCE5CCC19E06F5E00BD3FA3 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +224,8 @@
 		CBCE5CC119E035CE00BD3FA3 /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CBCE5CCB19E06F5E00BD3FA3 /* Player.h */,
+				CBCE5CCC19E06F5E00BD3FA3 /* Player.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCE5CCD19E06F5E00BD3FA3 /* Player.m in Sources */,
 				5434F13E19DFB950008EC3A6 /* LoginViewController.m in Sources */,
 				CBCE5CC419E039C600BD3FA3 /* AddUserViewController.m in Sources */,
 				CB97DEF319D3CCC800B37D71 /* ViewController.m in Sources */,

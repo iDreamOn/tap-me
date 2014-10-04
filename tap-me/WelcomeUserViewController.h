@@ -10,6 +10,6 @@
 
 @interface WelcomeUserViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *welcomeTextField;
-@property (weak, nonatomic) IBOutlet UIButton *startNewGameButton;
+@property (weak, nonatomic) IBOutlet UIButton *startGameButton;
 
 @end
