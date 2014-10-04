@@ -43,6 +43,9 @@
     timerLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field_time.png"]];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_tile.png"]];
     
+    
+    
+    
     buttonBeep = [self setupAudioPlayerWithFile:@"ButtonTap" type:@"wav"];
     secondBeep = [self setupAudioPlayerWithFile:@"SecondBeep" type:@"wav"];
     backgroundMusic = [self setupAudioPlayerWithFile:@"HallOfTheMountainKing" type:@"mp3"];
@@ -56,6 +59,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction) logout{
+
+    [self resetGame];
+    [self performSegueWithIdentifier:@"backtologin" sender:self];
+
+
+}
+
 - (IBAction) buttonPressed {
     NSLog(@"Pressed!");
     
@@ -63,6 +75,18 @@
     
     scoreLabel.text = [NSString stringWithFormat:@"Score\n%i", count];
     [buttonBeep play];
+}
+
+
+- (void) resetGame{
+
+    [backgroundMusic stop];
+    timerLabel.text = [NSString stringWithFormat:@"Time: %i", 30];
+    scoreLabel.text = [NSString stringWithFormat:@"Score\n%i", 0];
+    [timer invalidate];
+    
+    timer = nil;
+
 }
 
 - (void)setupGame {

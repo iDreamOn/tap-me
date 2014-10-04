@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController<UIAlertViewDelegate> {
     IBOutlet UILabel *scoreLabel;
     IBOutlet UILabel *timerLabel;
+
     
     // Add the next three lines
     NSInteger count;
@@ -25,5 +26,7 @@
 }
 
 - (IBAction) buttonPressed;
+- (IBAction) logout;
+
 
 @end

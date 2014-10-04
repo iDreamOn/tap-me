@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5434F13E19DFB950008EC3A6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5434F13D19DFB950008EC3A6 /* LoginViewController.m */; };
 		CB97DEDD19D3CCC700B37D71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97DEDC19D3CCC700B37D71 /* Foundation.framework */; };
 		CB97DEDF19D3CCC700B37D71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97DEDE19D3CCC700B37D71 /* CoreGraphics.framework */; };
 		CB97DEE119D3CCC700B37D71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97DEE019D3CCC700B37D71 /* UIKit.framework */; };
@@ -16,11 +17,6 @@
 		CB97DEF019D3CCC800B37D71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB97DEEE19D3CCC800B37D71 /* Main.storyboard */; };
 		CB97DEF319D3CCC800B37D71 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB97DEF219D3CCC800B37D71 /* ViewController.m */; };
 		CB97DEF519D3CCC800B37D71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB97DEF419D3CCC800B37D71 /* Images.xcassets */; };
-		CB97DEFC19D3CCC800B37D71 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97DEFB19D3CCC800B37D71 /* XCTest.framework */; };
-		CB97DEFD19D3CCC800B37D71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97DEDC19D3CCC700B37D71 /* Foundation.framework */; };
-		CB97DEFE19D3CCC800B37D71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97DEE019D3CCC700B37D71 /* UIKit.framework */; };
-		CB97DF0619D3CCC800B37D71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB97DF0419D3CCC800B37D71 /* InfoPlist.strings */; };
-		CB97DF0819D3CCC800B37D71 /* Tap_MeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB97DF0719D3CCC800B37D71 /* Tap_MeTests.m */; };
 		CB97DF2219D5173C00B37D71 /* bg_tile.png in Resources */ = {isa = PBXBuildFile; fileRef = CB97DF1119D5173C00B37D71 /* bg_tile.png */; };
 		CB97DF2319D5173C00B37D71 /* bg_tile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB97DF1219D5173C00B37D71 /* bg_tile@2x.png */; };
 		CB97DF2419D5173C00B37D71 /* button_tap_deselected.png in Resources */ = {isa = PBXBuildFile; fileRef = CB97DF1319D5173C00B37D71 /* button_tap_deselected.png */; };
@@ -42,17 +38,9 @@
 		CB97DF3919D639EF00B37D71 /* tap-me-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB97DF3819D639EF00B37D71 /* tap-me-Info.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CB97DEFF19D3CCC800B37D71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB97DED119D3CCC700B37D71 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB97DED819D3CCC700B37D71;
-			remoteInfo = "Tap Me";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		5434F13C19DFB950008EC3A6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5434F13D19DFB950008EC3A6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CB97DED919D3CCC700B37D71 /* tap-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tap-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB97DEDC19D3CCC700B37D71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB97DEDE19D3CCC700B37D71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,7 +54,6 @@
 		CB97DEF119D3CCC800B37D71 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CB97DEF219D3CCC800B37D71 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CB97DEF419D3CCC800B37D71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CB97DEFA19D3CCC800B37D71 /* tap-meTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tap-meTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB97DEFB19D3CCC800B37D71 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CB97DF0319D3CCC800B37D71 /* tap-meTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tap-meTests-Info.plist"; sourceTree = "<group>"; };
 		CB97DF0519D3CCC800B37D71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -104,16 +91,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB97DEF719D3CCC800B37D71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB97DEFC19D3CCC800B37D71 /* XCTest.framework in Frameworks */,
-				CB97DEFE19D3CCC800B37D71 /* UIKit.framework in Frameworks */,
-				CB97DEFD19D3CCC800B37D71 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				CB97DED919D3CCC700B37D71 /* tap-me.app */,
-				CB97DEFA19D3CCC800B37D71 /* tap-meTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +134,8 @@
 				CB97DEF219D3CCC800B37D71 /* ViewController.m */,
 				CB97DEF419D3CCC800B37D71 /* Images.xcassets */,
 				CB97DEE319D3CCC700B37D71 /* Supporting Files */,
+				5434F13C19DFB950008EC3A6 /* LoginViewController.h */,
+				5434F13D19DFB950008EC3A6 /* LoginViewController.m */,
 			);
 			path = "tap-me";
 			sourceTree = "<group>";
@@ -228,24 +206,6 @@
 			productReference = CB97DED919D3CCC700B37D71 /* tap-me.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB97DEF919D3CCC800B37D71 /* tap-meTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB97DF0E19D3CCC800B37D71 /* Build configuration list for PBXNativeTarget "tap-meTests" */;
-			buildPhases = (
-				CB97DEF619D3CCC800B37D71 /* Sources */,
-				CB97DEF719D3CCC800B37D71 /* Frameworks */,
-				CB97DEF819D3CCC800B37D71 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB97DF0019D3CCC800B37D71 /* PBXTargetDependency */,
-			);
-			name = "tap-meTests";
-			productName = "Tap MeTests";
-			productReference = CB97DEFA19D3CCC800B37D71 /* tap-meTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,11 +213,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				TargetAttributes = {
-					CB97DEF919D3CCC800B37D71 = {
-						TestTargetID = CB97DED819D3CCC700B37D71;
-					};
-				};
 			};
 			buildConfigurationList = CB97DED419D3CCC700B37D71 /* Build configuration list for PBXProject "tap-me" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -273,7 +228,6 @@
 			projectRoot = "";
 			targets = (
 				CB97DED819D3CCC700B37D71 /* tap-me */,
-				CB97DEF919D3CCC800B37D71 /* tap-meTests */,
 			);
 		};
 /* End PBXProject section */
@@ -307,14 +261,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB97DEF819D3CCC800B37D71 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB97DF0619D3CCC800B37D71 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -322,29 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5434F13E19DFB950008EC3A6 /* LoginViewController.m in Sources */,
 				CB97DEF319D3CCC800B37D71 /* ViewController.m in Sources */,
 				CB97DEED19D3CCC700B37D71 /* AppDelegate.m in Sources */,
 				CB97DEE919D3CCC700B37D71 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB97DEF619D3CCC800B37D71 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB97DF0819D3CCC800B37D71 /* Tap_MeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CB97DF0019D3CCC800B37D71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB97DED819D3CCC700B37D71 /* tap-me */;
-			targetProxy = CB97DEFF19D3CCC800B37D71 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB97DEE519D3CCC700B37D71 /* InfoPlist.strings */ = {
@@ -472,46 +403,6 @@
 			};
 			name = Release;
 		};
-		CB97DF0F19D3CCC800B37D71 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tap Me.app/Tap Me";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tap Me/Tap Me-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tap MeTests/tap-meTests-Info.plist";
-				PRODUCT_NAME = "tap-meTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		CB97DF1019D3CCC800B37D71 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tap Me.app/Tap Me";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Tap Me/Tap Me-Prefix.pch";
-				INFOPLIST_FILE = "Tap MeTests/tap-meTests-Info.plist";
-				PRODUCT_NAME = "tap-meTests";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -529,15 +420,6 @@
 			buildConfigurations = (
 				CB97DF0C19D3CCC800B37D71 /* Debug */,
 				CB97DF0D19D3CCC800B37D71 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB97DF0E19D3CCC800B37D71 /* Build configuration list for PBXNativeTarget "tap-meTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB97DF0F19D3CCC800B37D71 /* Debug */,
-				CB97DF1019D3CCC800B37D71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

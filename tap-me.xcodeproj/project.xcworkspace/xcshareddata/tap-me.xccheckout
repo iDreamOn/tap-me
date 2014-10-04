@@ -10,29 +10,29 @@
 	<string>tap-me</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>ED3A0A99-133A-4646-9EAB-66E4EB58C265</key>
+		<key>0259122217E458D9F3EA8C0E78BBE968FA1E4F8B</key>
 		<string>https://github.com/iDreamOn/tap-me.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>tap-me.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>ED3A0A99-133A-4646-9EAB-66E4EB58C265</key>
+		<key>0259122217E458D9F3EA8C0E78BBE968FA1E4F8B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/iDreamOn/tap-me.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>ED3A0A99-133A-4646-9EAB-66E4EB58C265</string>
+	<string>0259122217E458D9F3EA8C0E78BBE968FA1E4F8B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>ED3A0A99-133A-4646-9EAB-66E4EB58C265</string>
+			<string>0259122217E458D9F3EA8C0E78BBE968FA1E4F8B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>tap-me</string>
 		</dict>
