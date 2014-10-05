@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-EW-3kh">
-                                <rect key="frame" x="71" y="209" width="97" height="30"/>
+                                <rect key="frame" x="112" y="69" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -194,7 +194,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-3x-QwT">
-                                <rect key="frame" x="71" y="260" width="97" height="30"/>
+                                <rect key="frame" x="112" y="116" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -205,18 +205,18 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w6-if-NrJ">
-                                <rect key="frame" x="71" y="309" width="97" height="30"/>
+                                <rect key="frame" x="112" y="169" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
-                                    <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="a6x-XC-vuG"/>
-                                    <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="lzt-Oa-kK1"/>
-                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="tZT-59-7kE"/>
+                                    <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="Ghd-2f-U8V"/>
+                                    <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="4Nu-VN-odJ"/>
+                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="4ge-qo-5WE"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5m-yj-Z1q">
-                                <rect key="frame" x="84" y="371" width="125" height="30"/>
+                                <rect key="frame" x="98" y="207" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,7 +226,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-bz-t3o">
-                                <rect key="frame" x="116" y="409" width="60" height="30"/>
+                                <rect key="frame" x="130" y="245" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -364,7 +364,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="2io-rb-BnV"/>
-        <segue reference="BAc-eb-34b"/>
+        <segue reference="b15-Ld-ge7"/>
+        <segue reference="l0N-kC-i8R"/>
     </inferredMetricsTieBreakers>
 </document>
