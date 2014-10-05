@@ -15,10 +15,13 @@
 }
 
 @property(nonatomic,retain)NSString *firstname;
-+(Player*)getInstance;
++(NSMutableArray*)getPlayers;
++(void)addPlayer:(NSString*)fname username:(NSString*)usrname pass:(NSString*)upass;
++(Player *)setInstance:(Player*)player;
++(Player *)getInstance;
 
-- (void)setFirstname:(NSString*) value;
-- (NSString*)getFirstname;
+//- (void)setFirstname:(NSString*) value;
+//- (NSString*)getFirstname;
 
 - (void)setUsername:(NSString*) value;
 - (NSString*)getUsername;

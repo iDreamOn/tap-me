@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "Player.h"
 
 @interface LoginViewController ()
 
@@ -26,23 +27,26 @@
 
 -(IBAction) loginPressed{
     NSLog(@"login");
-    
-    
-    if ([username.text  isEqual: @"cpereyra"] && [password.text isEqual:@"Maxipereyra15"]){
-    
-        //[failedlogin setHidden:YES];
-        [self performSegueWithIdentifier:@"showWelcomePlayer" sender:self];
-    
-    }else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid entries!"
-                                                        message:[NSString stringWithFormat:@"Please check your entries"]
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
+
+    for (Player *p in [Player getPlayers]){
         
-        [alert show];
-        //[failedlogin setHidden:NO];
-    
+        
+        if ([username.text  isEqual: p.getUsername] && [password.text isEqual:p.getPassword]){
+            
+            
+            
+            [Player setInstance:p];
+            NSLog(@"login successful");
+            [failedlogin setHidden:YES];
+            [self performSegueWithIdentifier:@"welcomesegue" sender:self];
+            break;
+            
+        }else{
+            
+            [failedlogin setHidden:NO];
+            
+        }
+        
     }
 }
 

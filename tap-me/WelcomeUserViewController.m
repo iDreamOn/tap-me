@@ -27,9 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Player *curr = [Player getInstance];
-    _welcomeTextField.text = [NSString stringWithFormat:@"Welcome %@", curr.getFirstname];
+    Player *p = [Player getInstance];
     
+    _welcomeTextField.text = [NSString stringWithFormat:@"Welcome %@",p.firstname];
     // Do any additional setup after loading the view.
 }
 
@@ -55,5 +55,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(IBAction)logout{
+
+    
+    
+    [self performSegueWithIdentifier:@"WelcomeToTap" sender:self];
+
+
+}
 
 @end
