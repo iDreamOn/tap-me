@@ -111,9 +111,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="login" destination="JPM-MA-EfT" eventType="touchUpInside" id="6Ls-bh-GYe"/>
-                                    <action selector="loginPressed:" destination="JPM-MA-EfT" eventType="touchUpInside" id="t9x-yJ-HFg"/>
-                                    <segue destination="7jc-wm-vbq" kind="push" id="sCL-RI-OE2"/>
+                                    <action selector="loginPressed" destination="JPM-MA-EfT" eventType="touchUpInside" id="L4i-TX-5qo"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y74-4a-941">
@@ -146,6 +144,7 @@
                         <outlet property="failedlogin" destination="2M7-Oy-gxe" id="gYk-Vd-CLK"/>
                         <outlet property="password" destination="boo-Zp-hBw" id="apd-8a-Aeo"/>
                         <outlet property="username" destination="P82-af-f5i" id="coP-53-W1l"/>
+                        <segue destination="7jc-wm-vbq" kind="push" identifier="showWelcomePlayer" id="M7J-Hd-uZv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XG-tv-L9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -190,7 +189,7 @@
                                 <connections>
                                     <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="iQu-4M-fu3"/>
                                     <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="okS-tw-V2z"/>
-                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="Wtm-53-Ijk"/>
+                                    <action selector="textFieldShouldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="ssz-RM-nHV"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-3x-QwT">
@@ -201,7 +200,7 @@
                                 <connections>
                                     <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="EAo-j8-aoO"/>
                                     <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="s55-X1-tGR"/>
-                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="O3d-c7-xJa"/>
+                                    <action selector="textFieldShouldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="z0E-9g-NCL"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w6-if-NrJ">
@@ -212,7 +211,7 @@
                                 <connections>
                                     <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="Ghd-2f-U8V"/>
                                     <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="4Nu-VN-odJ"/>
-                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="4ge-qo-5WE"/>
+                                    <action selector="textFieldShouldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="Dra-gF-5cY"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5m-yj-Z1q">
@@ -337,6 +336,9 @@
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutPressed" destination="7jc-wm-vbq" eventType="touchUpInside" id="LeV-vq-MWR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -364,7 +366,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="b15-Ld-ge7"/>
-        <segue reference="l0N-kC-i8R"/>
+        <segue reference="M7J-Hd-uZv"/>
+        <segue reference="fxa-BA-avl"/>
     </inferredMetricsTieBreakers>
 </document>

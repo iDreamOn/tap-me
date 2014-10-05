@@ -40,6 +40,7 @@
 		CBCE5CC719E03F9100BD3FA3 /* WelcomeUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CC619E03F9100BD3FA3 /* WelcomeUserViewController.m */; };
 		CBCE5CCA19E04C2B00BD3FA3 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CC919E04C2B00BD3FA3 /* WelcomeViewController.m */; };
 		CBCE5CCD19E06F5E00BD3FA3 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CCC19E06F5E00BD3FA3 /* Player.m */; };
+		CBCE5CD119E19D7200BD3FA3 /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE5CD019E19D7200BD3FA3 /* ViewUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,8 @@
 		CBCE5CC919E04C2B00BD3FA3 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		CBCE5CCB19E06F5E00BD3FA3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		CBCE5CCC19E06F5E00BD3FA3 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		CBCE5CCF19E19D7200BD3FA3 /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
+		CBCE5CD019E19D7200BD3FA3 /* ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +210,7 @@
 		CBCE5CC019E0350300BD3FA3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CBCE5CCE19E19D2600BD3FA3 /* Util */,
 				5434F13C19DFB950008EC3A6 /* LoginViewController.h */,
 				5434F13D19DFB950008EC3A6 /* LoginViewController.m */,
 				CB97DEF119D3CCC800B37D71 /* GameViewController.h */,
@@ -228,6 +232,15 @@
 				CBCE5CCC19E06F5E00BD3FA3 /* Player.m */,
 			);
 			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		CBCE5CCE19E19D2600BD3FA3 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CBCE5CCF19E19D7200BD3FA3 /* ViewUtil.h */,
+				CBCE5CD019E19D7200BD3FA3 /* ViewUtil.m */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +329,7 @@
 				5434F13E19DFB950008EC3A6 /* LoginViewController.m in Sources */,
 				CBCE5CC419E039C600BD3FA3 /* AddUserViewController.m in Sources */,
 				CB97DEF319D3CCC800B37D71 /* GameViewController.m in Sources */,
+				CBCE5CD119E19D7200BD3FA3 /* ViewUtil.m in Sources */,
 				CB97DEED19D3CCC700B37D71 /* AppDelegate.m in Sources */,
 				CBCE5CC719E03F9100BD3FA3 /* WelcomeUserViewController.m in Sources */,
 				CBCE5CCA19E04C2B00BD3FA3 /* WelcomeViewController.m in Sources */,

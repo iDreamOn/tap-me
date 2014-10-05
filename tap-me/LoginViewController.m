@@ -24,21 +24,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginPressed:(UIButton *)sender {
-}
-
--(IBAction) login{
+-(IBAction) loginPressed{
     NSLog(@"login");
     
     
     if ([username.text  isEqual: @"cpereyra"] && [password.text isEqual:@"Maxipereyra15"]){
     
-        [failedlogin setHidden:YES];
-        [self performSegueWithIdentifier:@"mysegue" sender:self];
+        //[failedlogin setHidden:YES];
+        [self performSegueWithIdentifier:@"showWelcomePlayer" sender:self];
     
     }else{
-    
-        [failedlogin setHidden:NO];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid entries!"
+                                                        message:[NSString stringWithFormat:@"Please check your entries"]
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        
+        [alert show];
+        //[failedlogin setHidden:NO];
     
     }
 }

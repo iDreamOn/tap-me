@@ -39,6 +39,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)logoutPressed{
+    //Set current user to null
+    [self performSegueWithIdentifier:@"WelcomeToTap" sender:self];
+    
+}
+
 /*
 #pragma mark - Navigation
 
