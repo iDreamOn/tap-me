@@ -24,9 +24,5 @@
     AVAudioPlayer *secondBeep;
     AVAudioPlayer *backgroundMusic;
 }
-
-- (IBAction) buttonPressed;
-- (IBAction) quitGame;
-
-
+- (IBAction)exitButtonPressed;
 @end

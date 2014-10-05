@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "Player.h"
+#import "Database.h"
 
 @interface LoginViewController ()
 
@@ -27,27 +28,29 @@
 
 -(IBAction) loginPressed{
     NSLog(@"login");
-
-    for (Player *p in [Player getPlayers]){
-        
-        
-        if ([username.text  isEqual: p.getUsername] && [password.text isEqual:p.getPassword]){
-            
-            
-            
-            [Player setInstance:p];
-            NSLog(@"login successful");
-            [failedlogin setHidden:YES];
-            [self performSegueWithIdentifier:@"welcomesegue" sender:self];
-            break;
-            
-        }else{
-            
-            [failedlogin setHidden:NO];
-            
-        }
-        
-    }
+    Database *db = [Database getInstance];
+    Player *p = db.currentPlayer;
+    
+//    for (Player *p in [Player getPlayers]){
+//        
+//        
+//        if ([username.text  isEqual: p.getUsername] && [password.text isEqual:p.getPassword]){
+//            
+//            
+//            
+//            [Player setInstance:p];
+//            NSLog(@"login successful");
+//            [failedlogin setHidden:YES];
+//            [self performSegueWithIdentifier:@"welcomesegue" sender:self];
+//            break;
+//            
+//        }else{
+//            
+//            [failedlogin setHidden:NO];
+//            
+//        }
+    
+//    }
 }
 
 /*

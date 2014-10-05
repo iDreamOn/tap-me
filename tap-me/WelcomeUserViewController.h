@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface WelcomeUserViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *welcomeTextField;
-@property (weak, nonatomic) IBOutlet UIButton *startGameButton;
 
+- (IBAction)newGameButtonPressed;
 
--(IBAction)logout;
+- (IBAction)logoutButtonPressed;
 
 @end

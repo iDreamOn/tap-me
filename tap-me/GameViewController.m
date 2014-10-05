@@ -56,13 +56,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (IBAction) quitGame{
-
+- (IBAction)exitButtonPressed {
     [self resetGame];
-    [self performSegueWithIdentifier:@"showWelcomePlayer" sender:self];
-
-
+    [self performSegueWithIdentifier:@"toWelcomeUser" sender:self];
 }
 
 - (IBAction) buttonPressed {

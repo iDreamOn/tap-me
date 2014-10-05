@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SuJ-ab-iCd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="SuJ-ab-iCd">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -41,12 +41,12 @@
                                 <rect key="frame" x="0.0" y="18" width="320" height="22"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-fc-yes">
-                                <rect key="frame" x="126" y="508" width="66" height="30"/>
-                                <state key="normal" title="Log out">
+                                <rect key="frame" x="126" y="492" width="66" height="30"/>
+                                <state key="normal" title="Exit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="logout" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oLQ-4b-0bx"/>
+                                    <action selector="exitButtonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fqV-u2-CEB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="tTa-Ly-c80">
@@ -62,14 +62,14 @@
                     <connections>
                         <outlet property="scoreLabel" destination="tTa-Ly-c80" id="FeI-U3-dnq"/>
                         <outlet property="timerLabel" destination="mg4-Z2-55F" id="ZY4-ZH-iTd"/>
-                        <segue destination="JPM-MA-EfT" kind="push" identifier="backtologin" id="b7s-hf-Fhb"/>
+                        <segue destination="7jc-wm-vbq" kind="push" identifier="toWelcomeUser" id="7qP-mh-Wes"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1345" y="230"/>
         </scene>
-        <!--Login-->
+        <!--Login View Controller - Login-->
         <scene sceneID="Mez-yP-2be">
             <objects>
                 <viewController id="JPM-MA-EfT" customClass="LoginViewController" sceneMemberID="viewController">
@@ -132,7 +132,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tKq-6m-8eh" kind="push" id="fxa-BA-avl"/>
+                                    <segue destination="tKq-6m-8eh" kind="push" identifier="toWelcomeToTap" id="fxa-BA-avl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,7 +143,7 @@
                         <outlet property="failedlogin" destination="2M7-Oy-gxe" id="gYk-Vd-CLK"/>
                         <outlet property="password" destination="boo-Zp-hBw" id="apd-8a-Aeo"/>
                         <outlet property="username" destination="P82-af-f5i" id="coP-53-W1l"/>
-                        <segue destination="7jc-wm-vbq" kind="push" identifier="welcomesegue" id="q7W-7i-RRz"/>
+                        <segue destination="7jc-wm-vbq" kind="push" identifier="toWelcomeUser" id="q7W-7i-RRz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XG-tv-L9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -180,38 +180,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-EW-3kh">
-                                <rect key="frame" x="71" y="209" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UI6-EW-3kh">
+                                <rect key="frame" x="85" y="86" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="iQu-4M-fu3"/>
-                                    <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="okS-tw-V2z"/>
-                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="Wtm-53-Ijk"/>
+                                    <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="nfk-vs-0CM"/>
+                                    <action selector="textFieldDidEndEditing:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="Zoc-Kf-g0e"/>
+                                    <action selector="textFieldShouldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="pfa-Xj-K3x"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-3x-QwT">
-                                <rect key="frame" x="71" y="260" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-3x-QwT">
+                                <rect key="frame" x="85" y="124" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="EAo-j8-aoO"/>
-                                    <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="s55-X1-tGR"/>
-                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="O3d-c7-xJa"/>
+                                    <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="BNB-qF-JCI"/>
+                                    <action selector="textFieldDidEndEditing:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="ghI-O6-gNN"/>
+                                    <action selector="textFieldShouldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="eg4-W2-udh"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w6-if-NrJ">
-                                <rect key="frame" x="71" y="309" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w6-if-NrJ">
+                                <rect key="frame" x="85" y="162" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="textFieldDidBeginEditing:" destination="kY6-Jz-pVZ" eventType="editingDidBegin" id="a6x-XC-vuG"/>
-                                    <action selector="textFieldDidEndEditing:send:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="lzt-Oa-kK1"/>
-                                    <action selector="textFieldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="tZT-59-7kE"/>
+                                    <action selector="textFieldDidEndEditing:" destination="kY6-Jz-pVZ" eventType="editingDidEnd" id="ckA-yK-v2D"/>
+                                    <action selector="textFieldShouldReturn:" destination="kY6-Jz-pVZ" eventType="editingDidEndOnExit" id="sTq-dn-sSc"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5m-yj-Z1q">
-                                <rect key="frame" x="84" y="371" width="125" height="30"/>
+                                <rect key="frame" x="86" y="200" width="150" height="30"/>
                                 <state key="normal" title="Create">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -220,12 +220,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-bz-t3o">
-                                <rect key="frame" x="116" y="409" width="60" height="30"/>
+                                <rect key="frame" x="85" y="238" width="150" height="30"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tKq-6m-8eh" kind="push" id="l0N-kC-i8R"/>
+                                    <segue destination="tKq-6m-8eh" kind="push" identifier="toWelcomeToTap" id="l0N-kC-i8R"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -236,7 +236,7 @@
                         <outlet property="firstnameTextField" destination="UI6-EW-3kh" id="Pgi-bc-8eb"/>
                         <outlet property="passwordTextField" destination="0w6-if-NrJ" id="bAh-T0-Eb9"/>
                         <outlet property="usernameTextField" destination="uHV-3x-QwT" id="li5-qv-4qt"/>
-                        <segue destination="7jc-wm-vbq" kind="push" identifier="showWelcomePlayer" id="b15-Ld-ge7"/>
+                        <segue destination="7jc-wm-vbq" kind="push" identifier="toWelcomeUser" id="b15-Ld-ge7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFE-dE-398" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -255,27 +255,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Tap Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMt-ed-wve">
-                                <rect key="frame" x="84" y="108" width="167" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Tap Me" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMt-ed-wve">
+                                <rect key="frame" x="85" y="109" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p62-a8-QOP">
-                                <rect key="frame" x="84" y="204" width="99" height="30"/>
+                                <rect key="frame" x="85" y="164" width="150" height="30"/>
                                 <state key="normal" title="New User">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kY6-Jz-pVZ" kind="push" id="PeT-kN-H4N"/>
+                                    <segue destination="kY6-Jz-pVZ" kind="push" identifier="toAddUser" id="PeT-kN-H4N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4Q-cE-kN7">
-                                <rect key="frame" x="84" y="252" width="101" height="30"/>
+                                <rect key="frame" x="86" y="202" width="150" height="30"/>
                                 <state key="normal" title="Existing User">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JPM-MA-EfT" kind="push" id="N5n-JC-j80"/>
+                                    <segue destination="JPM-MA-EfT" kind="push" identifier="toLogin" id="N5n-JC-j80"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -302,19 +302,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-dM-qys">
                                 <rect key="frame" x="75" y="35" width="170" height="198"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Player X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkP-rl-71o">
-                                <rect key="frame" x="95" y="282" width="155" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Player X" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="150" translatesAutoresizingMaskIntoConstraints="NO" id="wkP-rl-71o">
+                                <rect key="frame" x="85" y="282" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74b-6z-9Fb">
-                                <rect key="frame" x="95" y="317" width="128" height="30"/>
+                                <rect key="frame" x="85" y="355" width="150" height="30"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="newgamesegue" id="S7g-T4-0Uy"/>
+                                    <action selector="newGameButtonPressed" destination="7jc-wm-vbq" eventType="touchUpInside" id="z3J-7x-Nxg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmT-qi-IIk">
+                                <rect key="frame" x="85" y="398" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonPressed" destination="7jc-wm-vbq" eventType="touchUpInside" id="e8s-sK-edb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -322,7 +332,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="lxk-gj-ix3"/>
                     <connections>
+                        <outlet property="newGameButton" destination="74b-6z-9Fb" id="QGP-bY-PYo"/>
                         <outlet property="welcomeTextField" destination="wkP-rl-71o" id="b87-P8-A7F"/>
+                        <segue destination="tKq-6m-8eh" kind="push" identifier="toWelcomeToTap" id="Fkn-vm-mjd"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="toNewGame" id="I9F-IQ-g5N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRp-wY-snN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -342,8 +355,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="N5n-JC-j80"/>
-        <segue reference="fxa-BA-avl"/>
-        <segue reference="q7W-7i-RRz"/>
+        <segue reference="Fkn-vm-mjd"/>
+        <segue reference="7qP-mh-Wes"/>
     </inferredMetricsTieBreakers>
 </document>

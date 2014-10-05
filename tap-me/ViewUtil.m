@@ -71,7 +71,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [UIView commitAnimations];
 }
 
-+ (IBAction)textFieldDidEndEditing:(UITextField *)textField window:(UIViewController *) window
++ (void)textFieldDidEndEditing:(UITextField *)textField window:(UIViewController *) window
 {
     //[self animateTextField:textField up:NO];
     CGRect viewFrame = window.view.frame;

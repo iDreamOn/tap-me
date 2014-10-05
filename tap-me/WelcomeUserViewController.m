@@ -8,6 +8,7 @@
 
 #import "WelcomeUserViewController.h"
 #import "Player.h"
+#import "Database.h"
 
 @interface WelcomeUserViewController ()
 
@@ -27,9 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Player *p = [Player getInstance];
+    Database *db = [Database getInstance];
+    Player *p = db.currentPlayer;
     
-    _welcomeTextField.text = [NSString stringWithFormat:@"Welcome %@",p.firstname];
+    _welcomeTextField.text = [NSString stringWithFormat:@"Welcome %@",p.getFirstname];
     // Do any additional setup after loading the view.
 }
 
@@ -37,12 +39,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)logoutPressed{
-    //Set current user to null
-    [self performSegueWithIdentifier:@"WelcomeToTap" sender:self];
-    
 }
 
 /*
@@ -56,13 +52,12 @@
 }
 */
 
--(IBAction)logout{
+- (IBAction)newGameButtonPressed {
+}
 
-    
-    
+- (IBAction)logoutButtonPressed {
+    //Set current user to null
     [self performSegueWithIdentifier:@"WelcomeToTap" sender:self];
-
-
 }
 
 @end
