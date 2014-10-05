@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "Player.h"
 
 @interface LoginViewController ()
 
@@ -31,15 +32,25 @@
     NSLog(@"login");
     
     
-    if ([username.text  isEqual: @"cpereyra"] && [password.text isEqual:@"Maxipereyra15"]){
-    
-        [failedlogin setHidden:YES];
-        [self performSegueWithIdentifier:@"mysegue" sender:self];
-    
-    }else{
-    
-        [failedlogin setHidden:NO];
-    
+    for (Player *p in [Player getPlayers]){
+        
+        
+        if ([username.text  isEqual: p.getUsername] && [password.text isEqual:p.getPassword]){
+            
+            
+            
+            [Player setInstance:p];
+            NSLog(@"login successful");
+            [failedlogin setHidden:YES];
+            [self performSegueWithIdentifier:@"welcomesegue" sender:self];
+            break;
+            
+        }else{
+            
+            [failedlogin setHidden:NO];
+            
+        }
+        
     }
 }
 

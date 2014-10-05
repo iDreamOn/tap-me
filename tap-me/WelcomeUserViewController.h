@@ -12,4 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *welcomeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *startGameButton;
 
+
+-(IBAction)logout;
+
 @end
