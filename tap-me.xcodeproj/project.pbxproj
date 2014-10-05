@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5434F13E19DFB950008EC3A6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5434F13D19DFB950008EC3A6 /* LoginViewController.m */; };
+		5472D18019E1E7170088B55A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5472D17F19E1E7170088B55A /* Main.storyboard */; };
 		54A8477D19E123A70073ECD4 /* Players.txt in Resources */ = {isa = PBXBuildFile; fileRef = 54A8477B19E123A70073ECD4 /* Players.txt */; };
 		54A8477E19E123A70073ECD4 /* TemplateIcon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A8477C19E123A70073ECD4 /* TemplateIcon2x.png */; };
 		CB97DEDD19D3CCC700B37D71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB97DEDC19D3CCC700B37D71 /* Foundation.framework */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		5434F13C19DFB950008EC3A6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5434F13D19DFB950008EC3A6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5472D17F19E1E7170088B55A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		54A8477B19E123A70073ECD4 /* Players.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Players.txt; sourceTree = "<group>"; };
 		54A8477C19E123A70073ECD4 /* TemplateIcon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon2x.png; sourceTree = "<group>"; };
 		CB97DED919D3CCC700B37D71 /* tap-me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tap-me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 		CB97DEE219D3CCC700B37D71 /* tap-me */ = {
 			isa = PBXGroup;
 			children = (
+				5472D17F19E1E7170088B55A /* Main.storyboard */,
 				CBCE5CC119E035CE00BD3FA3 /* Custom Classes */,
 				CBCE5CC019E0350300BD3FA3 /* View Controllers */,
 				CBCE5CBF19E034E800BD3FA3 /* App Delegate */,
