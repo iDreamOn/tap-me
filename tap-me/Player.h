@@ -23,4 +23,6 @@
 - (void)setPassword:(NSString*) value;
 - (NSString*)getPassword;
 
+- (NSString *)description;
+
 @end

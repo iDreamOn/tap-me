@@ -24,7 +24,7 @@
 
 -(void)setCurrentPlayer:(Player*)player;
 
--(Player *)getPlayerByUsername;
--(Player *)getPlayerByFirstname;
+-(Player *)getPlayerByUsername:(NSString *) value;
+-(Player *)getPlayerByFirstname:(NSString *) value;
 
 @end

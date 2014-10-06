@@ -13,5 +13,6 @@
 +(void)textFieldShouldReturn:(UITextField *)textField;
 +(void)textFieldDidBeginEditing:(UITextField *)textField window:(UIViewController *) window;
 +(void)textFieldDidEndEditing:(UITextField *)textField window:(UIViewController *) window;
++ (void)showInvalidEntriesAlert;
 
 @end

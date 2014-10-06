@@ -57,7 +57,7 @@
 
 - (IBAction)logoutButtonPressed {
     //Set current user to null
-    [self performSegueWithIdentifier:@"WelcomeToTap" sender:self];
+    [self performSegueWithIdentifier:@"toWelcomeToTap" sender:self];
 }
 
 @end

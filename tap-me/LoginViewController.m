@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "Player.h"
 #import "Database.h"
+#import "ViewUtil.h"
 
 @interface LoginViewController ()
 
@@ -28,8 +29,17 @@
 
 -(IBAction) loginPressed{
     NSLog(@"login");
+    
     Database *db = [Database getInstance];
-    Player *p = db.currentPlayer;
+    Player *p = [db getPlayerByUsername:username.text];
+    
+    //Player *p = nil;
+    
+    if (p!=nil) {
+        
+    } else {
+        [ViewUtil showInvalidEntriesAlert];
+    }
     
 //    for (Player *p in [Player getPlayers]){
 //        
@@ -62,5 +72,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)textFieldShouldReturn:(UITextField *)textField
+{
+    [ViewUtil textFieldShouldReturn:textField];
+}
+
+-(IBAction)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [ViewUtil textFieldDidBeginEditing:textField window:self];
+}
+
+- (IBAction)textFieldDidEndEditing:(UITextField *)textField
+{
+    [ViewUtil textFieldDidEndEditing:textField window:self];
+}
 
 @end

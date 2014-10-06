@@ -21,12 +21,15 @@ static Database *instance = nil;
         if(instance==nil)
         {
             instance= [Database new];
+            [instance loadPlayers];
         }
     }
     return instance;
 }
 
 -(void)loadPlayers {
+        players = [NSMutableArray array];
+    
         NSString* path = [[NSBundle mainBundle] pathForResource:@"Players"
                                                          ofType:@"txt"];
     
@@ -36,11 +39,13 @@ static Database *instance = nil;
         NSArray *listArray = [fileContents componentsSeparatedByString:@"\n"];
     
         for(NSString *obj in listArray){
+            
             NSArray *linevals = [obj componentsSeparatedByString:@","];
             Player *p = [Player new];
             [p setFirstname:[linevals objectAtIndex:0]];
             [p setUsername:[linevals objectAtIndex:1]];
             [p setPassword:[linevals objectAtIndex:2]];
+            
             [players addObject:p];
         }
 }
@@ -70,19 +75,20 @@ static Database *instance = nil;
     }
 }
 
--(Player *)getPlayerByUsername {
+-(Player *)getPlayerByUsername:(NSString *) value  {
     Player *result = nil;
     
     //TODO: add logic to check if user exists
-    if(false)
+    if(value!=nil)
     {
+        NSLog(@"Looking for username: %@",value);
         result = nil;
     }
     
     return result;
 }
 
--(Player *)getPlayerByFirstname {
+-(Player *)getPlayerByFirstname:(NSString *) value {
     Player *result = nil;
     
     //TODO: add logic to check if user exists

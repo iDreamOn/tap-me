@@ -18,7 +18,7 @@
     {
       "idiom" : "iphone",
       "size" : "60x60",
-      "scale" : "3x"
+      "unassigned" : true
     }
   ],
   "info" : {

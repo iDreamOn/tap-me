@@ -21,15 +21,22 @@
 - (void)setUsername:(NSString*) value {
     username = value;
 }
+
 - (NSString*)getUsername {
     return username;
 }
 
+
 - (void)setPassword:(NSString*) value {
     password = value;
 }
+
 - (NSString*)getPassword {
     return password;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat: @"%@,%@,%@", firstname,username,password];
 }
 
 @end

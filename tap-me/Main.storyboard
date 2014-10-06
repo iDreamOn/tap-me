@@ -97,12 +97,22 @@
                                 <rect key="frame" x="100" y="176" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidBeginEditing:" destination="JPM-MA-EfT" eventType="editingDidBegin" id="WZ2-du-5uF"/>
+                                    <action selector="textFieldDidEndEditing:" destination="JPM-MA-EfT" eventType="editingDidEnd" id="xFj-XG-m6A"/>
+                                    <action selector="textFieldShouldReturn:" destination="JPM-MA-EfT" eventType="editingDidEndOnExit" id="mbU-hL-KvA"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="boo-Zp-hBw">
                                 <rect key="frame" x="100" y="243" width="120" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="textFieldDidBeginEditing:" destination="JPM-MA-EfT" eventType="editingDidBegin" id="eos-bU-Xih"/>
+                                    <action selector="textFieldDidEndEditing:" destination="JPM-MA-EfT" eventType="editingDidEnd" id="3Yv-Fm-xir"/>
+                                    <action selector="textFieldShouldReturn:" destination="JPM-MA-EfT" eventType="editingDidEndOnExit" id="Qof-q4-z4A"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMh-tK-nLf">
                                 <rect key="frame" x="100" y="281" width="49" height="27"/>
@@ -332,7 +342,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="lxk-gj-ix3"/>
                     <connections>
-                        <outlet property="newGameButton" destination="74b-6z-9Fb" id="QGP-bY-PYo"/>
                         <outlet property="welcomeTextField" destination="wkP-rl-71o" id="b87-P8-A7F"/>
                         <segue destination="tKq-6m-8eh" kind="push" identifier="toWelcomeToTap" id="Fkn-vm-mjd"/>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="toNewGame" id="I9F-IQ-g5N"/>
@@ -355,7 +364,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Fkn-vm-mjd"/>
-        <segue reference="7qP-mh-Wes"/>
+        <segue reference="fxa-BA-avl"/>
+        <segue reference="q7W-7i-RRz"/>
     </inferredMetricsTieBreakers>
 </document>
