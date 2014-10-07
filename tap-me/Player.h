@@ -24,5 +24,6 @@
 - (NSString*)getPassword;
 
 - (NSString *)description;
+- (NSMutableDictionary *)getDict;
 
 @end

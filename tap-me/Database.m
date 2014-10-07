@@ -72,7 +72,7 @@ static Database *instance = nil;
         [array writeToFile:plistPath atomically:YES];
     }
     
-    [players addObject:player];
+    [players addObject:[player getDict]];
     [players writeToFile:plistPath atomically:YES];
 }
 

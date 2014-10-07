@@ -39,4 +39,12 @@
     return [NSString stringWithFormat: @"%@,%@,%@", firstname,username,password];
 }
 
+- (NSMutableDictionary *)getDict {
+    NSMutableDictionary *result = [NSMutableDictionary new];
+    [result setValue:self.getFirstname forKey:@"firstname"];
+    [result setValue:self.getUsername forKey:@"username"];
+    [result setValue:self.getPassword forKey:@"password"];
+    return result;
+}
+
 @end
