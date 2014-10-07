@@ -41,7 +41,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     CGFloat midline = textFieldRect.origin.y + 0.5 * textFieldRect.size.height;
     
     //Scroll only if textField is under keyboard
-    NSLog(@"textFieldRect.origin.y: %f, viewRect.size.height: %f, KEYBOARD_HEIGHT: %f",textFieldRect.origin.y,viewRect.size.height,KEYBOARD_HEIGHT);
+    //NSLog(@"textFieldRect.origin.y: %f, viewRect.size.height: %f, KEYBOARD_HEIGHT: %f",textFieldRect.origin.y,viewRect.size.height,KEYBOARD_HEIGHT);
     if (textFieldRect.origin.y+textFieldRect.size.height >= viewRect.size.height-KEYBOARD_HEIGHT) {
     
     CGFloat numerator = midline - viewRect.origin.y - MINIMUM_SCROLL_FRACTION * viewRect.size.height;

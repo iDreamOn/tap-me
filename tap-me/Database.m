@@ -21,7 +21,7 @@ static Database *instance = nil;
         if(instance==nil)
         {
             instance= [Database new];
-            [instance loadPlayers];
+            //[instance loadPlayers];
         }
     }
     return instance;
@@ -32,6 +32,8 @@ static Database *instance = nil;
     
         NSString* path = [[NSBundle mainBundle] pathForResource:@"Players"
                                                          ofType:@"txt"];
+    
+        NSLog(@"Loading database at %@",path);
     
         NSError *error;
         NSString *fileContents = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
@@ -51,21 +53,27 @@ static Database *instance = nil;
 }
 
 -(void)addPlayer:(Player*) player{
+    //Get the path to our plist file
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths firstObject];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"Players.plist"];
+    NSLog(@"Database is at: %@",plistPath);
+    NSLog(@"Adding player: %@",player);
+    //Check if file exists
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    if ([defaultManager fileExistsAtPath:plistPath]) {
+        NSLog(@"Loading players from file");
+        players = [NSMutableArray arrayWithContentsOfFile:plistPath];
+    }
+    else {
+        //create empty file
+        NSLog(@"Creating a new file");
+        NSMutableArray *array = [NSMutableArray array];
+        [array writeToFile:plistPath atomically:YES];
+    }
     
-    //    NSString *str = [NSString stringWithFormat:@"%@/%@/%@", fname, usrname, upass];
-    //
-    //    NSString* path = [[NSBundle mainBundle] pathForResource:@"Players"
-    //                                                     ofType:@"txt"];
-    //
-    //    // Open output file in append mode:
-    //    NSOutputStream *stream = [[NSOutputStream alloc] initToFileAtPath:path append:YES];
-    //    [stream open];
-    //    // Make NSData object from string:
-    //    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-    //    // Write data to output file:
-    //    [stream write:data.bytes maxLength:data.length];
-    //    [stream close];
-
+    [players addObject:player];
+    [players writeToFile:plistPath atomically:YES];
 }
 
 -(void)setCurrentPlayer:(Player*)player {
@@ -98,6 +106,10 @@ static Database *instance = nil;
     }
     
     return result;
+}
+
+-(void)savePlayers {
+
 }
 
 @end

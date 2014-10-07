@@ -21,6 +21,7 @@
 
 -(void)addPlayer:(Player*) player;
 -(void)loadPlayers;
+-(void)savePlayers;
 
 -(void)setCurrentPlayer:(Player*)player;
 
