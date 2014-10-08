@@ -7,6 +7,7 @@
 //
 
 #import "WelcomeViewController.h"
+#import "ViewUtil.h"
 
 @interface WelcomeViewController ()
 
@@ -25,18 +26,8 @@
 
 - (void)viewDidLoad
 {
-    // Add our bar button items
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
-                                     initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                     target:self action:@selector(cancelButtonPressed:)];
-    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
-                                   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-                                   target:self action:@selector(saveButtonPressed:)];
-    // Assign the bar buttons to the navigation controller
-    [self.navigationItem setLeftBarButtonItem:cancelButton];
-    [self.navigationItem setRightBarButtonItem:saveButton];
     [super viewDidLoad];
-    // Create a white transparent bar for the bottom of the screen
+    [ViewUtil setBackground:self];
 }
 
 - (void)didReceiveMemoryWarning

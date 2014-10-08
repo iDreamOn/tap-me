@@ -9,6 +9,7 @@
 #import "WelcomeUserViewController.h"
 #import "Player.h"
 #import "Database.h"
+#import "ViewUtil.h"
 
 @interface WelcomeUserViewController ()
 
@@ -28,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [ViewUtil setBackground:self];
     Database *db = [Database getInstance];
     Player *p = db.currentPlayer;
     

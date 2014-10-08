@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [ViewUtil setBackground:self];
     // Do any additional setup after loading the view.
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "ViewUtil.h"
 
 @interface GameViewController ()
 
@@ -41,7 +42,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     scoreLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field_score.png"]];
     timerLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field_time.png"]];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_tile.png"]];
+    
+    [ViewUtil setBackground:self];
     
     buttonBeep = [self setupAudioPlayerWithFile:@"ButtonTap" type:@"wav"];
     secondBeep = [self setupAudioPlayerWithFile:@"SecondBeep" type:@"wav"];

@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [ViewUtil setBackground:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,9 +37,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)textFieldShouldReturn:(UITextField *)textField
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [ViewUtil textFieldShouldReturn:textField];
+    return YES;
 }
 
 -(IBAction)textFieldDidBeginEditing:(UITextField *)textField
@@ -86,6 +87,63 @@
 
 -(Boolean) hasValidEntries {
     return !([_firstnameTextField.text length]==0||[_usernameTextField.text length]==0||[_passwordTextField.text length]==0);
+}
+
+#pragma mark - User Interaction Methods
+- (void)imageViewTapped:(id)sender {
+    [[[UIActionSheet alloc] initWithTitle:nil
+                                 delegate:self
+                        cancelButtonTitle:@"Cancel"
+                   destructiveButtonTitle:nil
+                        otherButtonTitles:@"Take Picture", @"Choose From Library", nil]
+                               showInView:self.view];
+     }
+
+#pragma mark - Action Sheet Delegate
+-(void)actionSheet:(UIActionSheet *)actionSheet
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        return;
+    }
+    if (buttonIndex == 0 && [UIImagePickerController
+                             isSourceTypeAvailable:
+                             UIImagePickerControllerSourceTypeCamera]) {
+        // Take Picture Selected
+        UIImagePickerController *imagePicker =
+        [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.allowsEditing = YES;
+        [imagePicker setSourceType:
+         UIImagePickerControllerSourceTypeCamera];
+        [self.navigationController presentViewController:
+         imagePicker animated:YES completion:nil];
+    }
+    if (buttonIndex == 1) {
+        // Choose Photo From Library
+        UIImagePickerController *imagePicker =
+        [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.allowsEditing = YES;
+        [imagePicker setSourceType:
+         UIImagePickerControllerSourceTypePhotoLibrary];
+        [self.navigationController presentViewController:
+         imagePicker animated:YES completion:nil];
+    }
+}
+
+#pragma mark - UIImagePicker Delegate
+-(void)imagePickerController:(UIImagePickerController *)
+picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *pic;
+    //Grab the stored image
+    if ([info objectForKey:UIImagePickerControllerEditedImage]) {
+        pic = [info objectForKey:
+               UIImagePickerControllerEditedImage];
+        [self.finalImageView setImage:pic];
+        [self.placeholderImageView setHidden:YES];
+    }
+    [self.presentingViewController dismissViewControllerAnimated:
+     YES completion:nil];
 }
 
 /*

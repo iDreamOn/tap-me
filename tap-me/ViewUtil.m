@@ -17,6 +17,37 @@ static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
 static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
++ (void) setBackground:(UIViewController *) window {
+    NSString *image = @"background_1";
+    
+    int randNum = rand() % 3 + 1;
+    
+    switch (randNum) {
+        case 1:
+            image =@"background_1";
+            break;
+        case 2:
+            image =@"beach";
+            break;
+        case 3:
+            image =@"beach2";
+            break;
+        case 4:
+            image =@"sunrise";
+            break;
+        default:
+            break;
+    }
+    
+    NSLog(@"Random number is %i so image is %@",randNum,image);
+    
+    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
+    bgImageView.frame = window.view.bounds;
+    [window.view addSubview:bgImageView];
+    [window.view sendSubviewToBack:bgImageView];
+
+}
+
 + (void)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];

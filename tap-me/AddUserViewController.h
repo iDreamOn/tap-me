@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddUserViewController : UIViewController
+@interface AddUserViewController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate,
+UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *placeholderImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *finalImageView;
 @property (strong, nonatomic) IBOutlet UITextField *firstnameTextField;
